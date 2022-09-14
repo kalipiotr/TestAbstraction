@@ -28,8 +28,4 @@ target 'TestAbstraction' do
     inherit! :search_paths
   end
 
-  target 'TestAbstractionUITests' do
-    # pod 'Cucumberish', git: 'https://github.com/Ahmed-Ali/Cucumberish.git'
-  end
-
 end
