@@ -38,6 +38,9 @@
 		26D77DCB28CEAD6100A32EA6 /* AssembliesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D77DCA28CEAD6100A32EA6 /* AssembliesConfigurator.swift */; };
 		26D77DCC28CEAE3200A32EA6 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D77DC528CEACDB00A32EA6 /* TestsAppDelegate.swift */; };
 		26D77DCE28CEB03D00A32EA6 /* WindowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D77DCD28CEB03D00A32EA6 /* WindowBuilder.swift */; };
+		26FE926228D2624A00BB0BA6 /* BuildersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE926128D2624A00BB0BA6 /* BuildersAssembly.swift */; };
+		26FE926628D2628B00BB0BA6 /* BuildersAssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE926528D2628B00BB0BA6 /* BuildersAssemblyTests.swift */; };
+		26FE926828D262BE00BB0BA6 /* AssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE926728D262BE00BB0BA6 /* AssemblyTests.swift */; };
 		6BCFD845BDF76C9157F2BE20 /* Pods_TestAbstractionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C15ABE8B871C2F68C487CB0 /* Pods_TestAbstractionTests.framework */; };
 		CC382C1F2E4C0B30370EC1CA /* Pods_TestAbstraction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6195378769D22935CAB57A99 /* Pods_TestAbstraction.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +90,9 @@
 		26D77DC828CEAD2100A32EA6 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		26D77DCA28CEAD6100A32EA6 /* AssembliesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesConfigurator.swift; sourceTree = "<group>"; };
 		26D77DCD28CEB03D00A32EA6 /* WindowBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBuilder.swift; sourceTree = "<group>"; };
+		26FE926128D2624A00BB0BA6 /* BuildersAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildersAssembly.swift; sourceTree = "<group>"; };
+		26FE926528D2628B00BB0BA6 /* BuildersAssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildersAssemblyTests.swift; sourceTree = "<group>"; };
+		26FE926728D262BE00BB0BA6 /* AssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyTests.swift; sourceTree = "<group>"; };
 		35A0A26FD7A4BA96442F2513 /* Pods-TestAbstractionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAbstractionTests.debug.xcconfig"; path = "Target Support Files/Pods-TestAbstractionTests/Pods-TestAbstractionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		389F882DA342F122321638AA /* Pods-TestAbstraction-TestAbstractionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAbstraction-TestAbstractionUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestAbstraction-TestAbstractionUITests/Pods-TestAbstraction-TestAbstractionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46529CD0D4A48BC37EC2BA1F /* Pods-TestAbstractionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAbstractionTests.release.xcconfig"; path = "Target Support Files/Pods-TestAbstractionTests/Pods-TestAbstractionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		26896E1128CEA22D002A4B89 /* TestAbstractionTests */ = {
 			isa = PBXGroup;
 			children = (
+				26FE926328D2626F00BB0BA6 /* Application */,
 				26896E3528CEA3BE002A4B89 /* Injector */,
 				26D77DA728CEA6FE00A32EA6 /* IncludeCommandIdHeaderInterceptorTests+Assembly.swift */,
 				26D77DA928CEA70800A32EA6 /* IncludeCommandIdHeaderInterceptorTests.swift */,
@@ -259,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				26D77DC128CEABD200A32EA6 /* AppAssembly.swift */,
+				26FE926128D2624A00BB0BA6 /* BuildersAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -270,6 +278,23 @@
 				26D77DCA28CEAD6100A32EA6 /* AssembliesConfigurator.swift */,
 			);
 			path = Configurators;
+			sourceTree = "<group>";
+		};
+		26FE926328D2626F00BB0BA6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				26FE926428D2627B00BB0BA6 /* Assemblies */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		26FE926428D2627B00BB0BA6 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				26FE926528D2628B00BB0BA6 /* BuildersAssemblyTests.swift */,
+				26FE926728D262BE00BB0BA6 /* AssemblyTests.swift */,
+			);
+			path = Assemblies;
 			sourceTree = "<group>";
 		};
 		8FD6D0E19ECD922438CD6009 /* Pods */ = {
@@ -468,6 +493,7 @@
 				26D77DA428CEA62300A32EA6 /* Resolvable.swift in Sources */,
 				26D77D9D28CEA5CE00A32EA6 /* Injector.swift in Sources */,
 				26896E0028CEA22C002A4B89 /* ViewController.swift in Sources */,
+				26FE926228D2624A00BB0BA6 /* BuildersAssembly.swift in Sources */,
 				26896DFC28CEA22C002A4B89 /* AppDelegate.swift in Sources */,
 				26D77DCB28CEAD6100A32EA6 /* AssembliesConfigurator.swift in Sources */,
 				26D77DA128CEA5FE00A32EA6 /* Injector+Resolvable.swift in Sources */,
@@ -490,12 +516,14 @@
 				26D77DBC28CEAA9900A32EA6 /* TestsSessionsAssembly.swift in Sources */,
 				26896E3228CEA2ED002A4B89 /* TestInjector.swift in Sources */,
 				26896E3028CEA2B0002A4B89 /* InjectableTestCase.swift in Sources */,
+				26FE926628D2628B00BB0BA6 /* BuildersAssemblyTests.swift in Sources */,
 				26D77DAA28CEA70900A32EA6 /* IncludeCommandIdHeaderInterceptorTests.swift in Sources */,
 				26D77DB928CEAA3000A32EA6 /* TestAssembly.swift in Sources */,
 				26896E2C28CEA245002A4B89 /* TearDownTestCase.swift in Sources */,
 				26896E2E28CEA27B002A4B89 /* TestCase.swift in Sources */,
 				26896E3428CEA391002A4B89 /* AssemblableTestCase.swift in Sources */,
 				26D77DA828CEA6FE00A32EA6 /* IncludeCommandIdHeaderInterceptorTests+Assembly.swift in Sources */,
+				26FE926828D262BE00BB0BA6 /* AssemblyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
