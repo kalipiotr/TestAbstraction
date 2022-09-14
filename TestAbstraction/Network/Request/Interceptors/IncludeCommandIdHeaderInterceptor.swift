@@ -1,8 +1,5 @@
 import Foundation
 
-/// `IncludeCommandIdHeaderInterceptor` struct encapsulate functionality of adding
-/// http header X-Command-Id with identify request in entur
-/// If the query contains header, the header will not be regenerated
 class IncludeCommandIdHeaderInterceptor: RequestInterceptor {
     private let commandIdValue: String
 
