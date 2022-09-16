@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261BA6C328D5146300582765 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C228D5146300582765 /* NetworkLogger.swift */; };
+		261BA6C528D514D000582765 /* ConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C428D514D000582765 /* ConfiguratorsAssembly.swift */; };
+		261BA6C828D515BD00582765 /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C728D515BD00582765 /* ServerConfiguration.swift */; };
+		261BA6CA28D5164500582765 /* ConfiguratorsAssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C928D5164500582765 /* ConfiguratorsAssemblyTests.swift */; };
 		26896DFC28CEA22C002A4B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896DFB28CEA22C002A4B89 /* AppDelegate.swift */; };
 		26896E0028CEA22C002A4B89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896DFF28CEA22C002A4B89 /* ViewController.swift */; };
 		26896E0328CEA22C002A4B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26896E0128CEA22C002A4B89 /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		261BA6C228D5146300582765 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		261BA6C428D514D000582765 /* ConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorsAssembly.swift; sourceTree = "<group>"; };
+		261BA6C728D515BD00582765 /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
+		261BA6C928D5164500582765 /* ConfiguratorsAssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorsAssemblyTests.swift; sourceTree = "<group>"; };
 		26896DF828CEA22C002A4B89 /* TestAbstraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAbstraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26896DFB28CEA22C002A4B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26896DFF28CEA22C002A4B89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +132,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261BA6BE28D510ED00582765 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6C028D511A100582765 /* Flows */,
+				261BA6BF28D5115800582765 /* CommonKit */,
+				26D77DBF28CEABB900A32EA6 /* Application */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		261BA6BF28D5115800582765 /* CommonKit */ = {
+			isa = PBXGroup;
+			children = (
+				26D77DAE28CEA7DA00A32EA6 /* Network */,
+			);
+			path = CommonKit;
+			sourceTree = "<group>";
+		};
+		261BA6C028D511A100582765 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6C128D5141900582765 /* WeatherFlow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		261BA6C128D5141900582765 /* WeatherFlow */ = {
+			isa = PBXGroup;
+			children = (
+				26896DFF28CEA22C002A4B89 /* ViewController.swift */,
+			);
+			path = WeatherFlow;
+			sourceTree = "<group>";
+		};
+		261BA6C628D515A200582765 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				26D77DC728CEAD1800A32EA6 /* Configurators */,
+				261BA6C728D515BD00582765 /* ServerConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		26896DEF28CEA22C002A4B89 = {
 			isa = PBXGroup;
 			children = (
@@ -147,11 +198,7 @@
 		26896DFA28CEA22C002A4B89 /* TestAbstraction */ = {
 			isa = PBXGroup;
 			children = (
-				26D77DBF28CEABB900A32EA6 /* Application */,
-				26D77DAE28CEA7DA00A32EA6 /* Network */,
-				26D77D9728CEA58B00A32EA6 /* Utils */,
-				26896DFB28CEA22C002A4B89 /* AppDelegate.swift */,
-				26896DFF28CEA22C002A4B89 /* ViewController.swift */,
+				261BA6BE28D510ED00582765 /* Source */,
 				26896E0128CEA22C002A4B89 /* Main.storyboard */,
 				26896E0428CEA22D002A4B89 /* Assets.xcassets */,
 				26896E0628CEA22D002A4B89 /* LaunchScreen.storyboard */,
@@ -222,6 +269,7 @@
 			children = (
 				26D77DB228CEA92000A32EA6 /* Request */,
 				26D77DB028CEA7FE00A32EA6 /* HTTPHeader.swift */,
+				261BA6C228D5146300582765 /* NetworkLogger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -254,10 +302,12 @@
 		26D77DBF28CEABB900A32EA6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				26896DFB28CEA22C002A4B89 /* AppDelegate.swift */,
 				26D77DC328CEACC200A32EA6 /* main.swift */,
 				26D77DCD28CEB03D00A32EA6 /* WindowBuilder.swift */,
 				26D77DC028CEABC800A32EA6 /* Assemblies */,
-				26D77DC728CEAD1800A32EA6 /* Configurators */,
+				261BA6C628D515A200582765 /* Configuration */,
+				26D77D9728CEA58B00A32EA6 /* Utils */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -267,6 +317,7 @@
 			children = (
 				26D77DC128CEABD200A32EA6 /* AppAssembly.swift */,
 				26FE926128D2624A00BB0BA6 /* BuildersAssembly.swift */,
+				261BA6C428D514D000582765 /* ConfiguratorsAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -291,8 +342,9 @@
 		26FE926428D2627B00BB0BA6 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				26FE926528D2628B00BB0BA6 /* BuildersAssemblyTests.swift */,
 				26FE926728D262BE00BB0BA6 /* AssemblyTests.swift */,
+				26FE926528D2628B00BB0BA6 /* BuildersAssemblyTests.swift */,
+				261BA6C928D5164500582765 /* ConfiguratorsAssemblyTests.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -486,10 +538,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261BA6C528D514D000582765 /* ConfiguratorsAssembly.swift in Sources */,
+				261BA6C328D5146300582765 /* NetworkLogger.swift in Sources */,
 				26D77DB128CEA7FE00A32EA6 /* HTTPHeader.swift in Sources */,
 				26D77DB728CEA95E00A32EA6 /* RequestInterceptor.swift in Sources */,
 				26D77D9B28CEA5BC00A32EA6 /* Injected.swift in Sources */,
 				26D77DAC28CEA77400A32EA6 /* URL+FromString.swift in Sources */,
+				261BA6C828D515BD00582765 /* ServerConfiguration.swift in Sources */,
 				26D77DA428CEA62300A32EA6 /* Resolvable.swift in Sources */,
 				26D77D9D28CEA5CE00A32EA6 /* Injector.swift in Sources */,
 				26896E0028CEA22C002A4B89 /* ViewController.swift in Sources */,
@@ -517,6 +572,7 @@
 				26896E3228CEA2ED002A4B89 /* TestInjector.swift in Sources */,
 				26896E3028CEA2B0002A4B89 /* InjectableTestCase.swift in Sources */,
 				26FE926628D2628B00BB0BA6 /* BuildersAssemblyTests.swift in Sources */,
+				261BA6CA28D5164500582765 /* ConfiguratorsAssemblyTests.swift in Sources */,
 				26D77DAA28CEA70900A32EA6 /* IncludeCommandIdHeaderInterceptorTests.swift in Sources */,
 				26D77DB928CEAA3000A32EA6 /* TestAssembly.swift in Sources */,
 				26896E2C28CEA245002A4B89 /* TearDownTestCase.swift in Sources */,
