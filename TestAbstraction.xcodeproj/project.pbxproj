@@ -11,6 +11,10 @@
 		261BA6C528D514D000582765 /* ConfiguratorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C428D514D000582765 /* ConfiguratorsAssembly.swift */; };
 		261BA6C828D515BD00582765 /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C728D515BD00582765 /* ServerConfiguration.swift */; };
 		261BA6CA28D5164500582765 /* ConfiguratorsAssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6C928D5164500582765 /* ConfiguratorsAssemblyTests.swift */; };
+		261BA6CC28D6343D00582765 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6CB28D6343D00582765 /* Coordinator.swift */; };
+		261BA6D028D634DB00582765 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6CF28D634DB00582765 /* Presentable.swift */; };
+		261BA6D628F3699000582765 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6D528F3699000582765 /* Router.swift */; };
+		261BA6D928F36BEC00582765 /* NavigationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261BA6D828F36BEC00582765 /* NavigationConfiguration.swift */; };
 		26896DFC28CEA22C002A4B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896DFB28CEA22C002A4B89 /* AppDelegate.swift */; };
 		26896E0028CEA22C002A4B89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896DFF28CEA22C002A4B89 /* ViewController.swift */; };
 		26896E0328CEA22C002A4B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26896E0128CEA22C002A4B89 /* Main.storyboard */; };
@@ -64,6 +68,10 @@
 		261BA6C428D514D000582765 /* ConfiguratorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorsAssembly.swift; sourceTree = "<group>"; };
 		261BA6C728D515BD00582765 /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
 		261BA6C928D5164500582765 /* ConfiguratorsAssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorsAssemblyTests.swift; sourceTree = "<group>"; };
+		261BA6CB28D6343D00582765 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		261BA6CF28D634DB00582765 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		261BA6D528F3699000582765 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		261BA6D828F36BEC00582765 /* NavigationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfiguration.swift; sourceTree = "<group>"; };
 		26896DF828CEA22C002A4B89 /* TestAbstraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAbstraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26896DFB28CEA22C002A4B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26896DFF28CEA22C002A4B89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +183,22 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		261BA6D428F3682A00582765 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		261BA6D728F36B7900582765 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				261BA6D528F3699000582765 /* Router.swift */,
+				261BA6D828F36BEC00582765 /* NavigationConfiguration.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		26896DEF28CEA22C002A4B89 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +262,7 @@
 			children = (
 				26D77DAD28CEA78D00A32EA6 /* Injector */,
 				26D77DAB28CEA77400A32EA6 /* URL+FromString.swift */,
+				261BA6CF28D634DB00582765 /* Presentable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -302,7 +327,9 @@
 		26D77DBF28CEABB900A32EA6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				261BA6D728F36B7900582765 /* Router */,
 				26896DFB28CEA22C002A4B89 /* AppDelegate.swift */,
+				261BA6CB28D6343D00582765 /* Coordinator.swift */,
 				26D77DC328CEACC200A32EA6 /* main.swift */,
 				26D77DCD28CEB03D00A32EA6 /* WindowBuilder.swift */,
 				26D77DC028CEABC800A32EA6 /* Assemblies */,
@@ -334,6 +361,7 @@
 		26FE926328D2626F00BB0BA6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				261BA6D428F3682A00582765 /* Network */,
 				26FE926428D2627B00BB0BA6 /* Assemblies */,
 			);
 			path = Application;
@@ -541,11 +569,13 @@
 				261BA6C528D514D000582765 /* ConfiguratorsAssembly.swift in Sources */,
 				261BA6C328D5146300582765 /* NetworkLogger.swift in Sources */,
 				26D77DB128CEA7FE00A32EA6 /* HTTPHeader.swift in Sources */,
+				261BA6D628F3699000582765 /* Router.swift in Sources */,
 				26D77DB728CEA95E00A32EA6 /* RequestInterceptor.swift in Sources */,
 				26D77D9B28CEA5BC00A32EA6 /* Injected.swift in Sources */,
 				26D77DAC28CEA77400A32EA6 /* URL+FromString.swift in Sources */,
 				261BA6C828D515BD00582765 /* ServerConfiguration.swift in Sources */,
 				26D77DA428CEA62300A32EA6 /* Resolvable.swift in Sources */,
+				261BA6CC28D6343D00582765 /* Coordinator.swift in Sources */,
 				26D77D9D28CEA5CE00A32EA6 /* Injector.swift in Sources */,
 				26896E0028CEA22C002A4B89 /* ViewController.swift in Sources */,
 				26FE926228D2624A00BB0BA6 /* BuildersAssembly.swift in Sources */,
@@ -559,6 +589,8 @@
 				26D77DB528CEA93F00A32EA6 /* IncludeCommandIdHeaderInterceptor.swift in Sources */,
 				26D77DC228CEABD200A32EA6 /* AppAssembly.swift in Sources */,
 				26D77DA628CEA63400A32EA6 /* Registrable.swift in Sources */,
+				261BA6D028D634DB00582765 /* Presentable.swift in Sources */,
+				261BA6D928F36BEC00582765 /* NavigationConfiguration.swift in Sources */,
 				26D77DCE28CEB03D00A32EA6 /* WindowBuilder.swift in Sources */,
 				26D77D9928CEA59700A32EA6 /* Assembly.swift in Sources */,
 			);
