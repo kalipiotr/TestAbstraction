@@ -10,16 +10,18 @@ Welcome to TestAbstraction, an abstraction layer for Unit tests built specifical
 ## Unit tests with autoreleasing resources
 
 ### Presenter tests - WeatherInfoPresenterTests
-    
-    final class WeatherInfoPresenterTests: XCTestCase, AssemblablePresenterTestCase {
-        @TearDownProperty var assembly: WeatherInfoPresenterTestsAssembly!
-        @TearDownProperty var sut: WeatherInfoPresenter!
-        @TearDownProperty var view: WeatherInfoVCMock!
 
-        override func setUp() {
-            super.setUp()
-            setUpTestCase(assembly: WeatherInfoPresenterTestsAssembly(),
-                          view: WeatherInfoVCMock(),
-                          sut: WeatherInfoPresenter(view: view))    
-        }
+```swift
+final class WeatherInfoPresenterTests: XCTestCase, AssemblablePresenterTestCase {
+    @TearDownProperty var assembly: WeatherInfoPresenterTestsAssembly!
+    @TearDownProperty var sut: WeatherInfoPresenter!
+    @TearDownProperty var view: WeatherInfoVCMock!
+
+    override func setUp() {
+        super.setUp()
+        setUpTestCase(assembly: WeatherInfoPresenterTestsAssembly(),
+                        view: WeatherInfoVCMock(),
+                        sut: WeatherInfoPresenter(view: view))    
     }
+}
+```
