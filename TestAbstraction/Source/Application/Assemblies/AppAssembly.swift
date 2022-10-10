@@ -2,7 +2,8 @@ class AppAssembly: Assembly {
     private var assemblies = AssemblyGroup([
         // use alphabetical order
         BuildersAssembly(),
-        ConfiguratorsAssembly()
+        ConfiguratorsAssembly(),
+        ProvidersAssembly()
     ])
 
     public func assemble(injector: Injectable) {

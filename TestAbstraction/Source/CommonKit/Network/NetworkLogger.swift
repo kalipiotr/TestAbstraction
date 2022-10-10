@@ -39,7 +39,7 @@ enum NetworkLogger {
 
 private extension Dictionary where Key == String, Value == String {
     func headerString() -> String {
-        return sorted(by: { $0.0 < $1.0 })
+        sorted(by: { $0.0 < $1.0 })
             .reduce(into: "", { $0 += "   \($1.0) = \($1.1) \n" })
     }
 }
