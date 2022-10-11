@@ -50,15 +50,11 @@ class Coordinator: NSObject, Coordinate {
             .forEach { childCoordinators.remove(at: $0.offset) }
     }
 
-    public func removeAllDependencies(withRootConfiguration configuration: NavigationConfiguration = .bottomBar) {
+    public func removeAllDependencies(withRootConfiguration configuration: NavigationConfiguration = .standardRoot) {
         for coordinator in childCoordinators {
             removeDependency(coordinator)
         }
         childCoordinators.removeAll()
         router.popToRoot(configuration: configuration)
-    }
-
-    public func resetNavigationConfiguration() {
-        router.resetNavigationConfiguration(to: initialNavigationConfiguration)
     }
 }

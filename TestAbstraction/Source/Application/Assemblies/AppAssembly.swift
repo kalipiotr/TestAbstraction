@@ -3,6 +3,8 @@ class AppAssembly: Assembly {
         // use alphabetical order
         BuildersAssembly(),
         ConfiguratorsAssembly(),
+        ModuleFactoryAssembly(),
+        OtherAssembly(),
         ProvidersAssembly()
     ])
 

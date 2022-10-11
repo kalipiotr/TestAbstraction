@@ -43,24 +43,6 @@ protocol Router: Presentable {
     func dismiss(animated: Bool,
                  completion: (() -> Void)?)
 
-    // pop
-    func pop()
-    func pop(configuration: NavigationConfiguration)
-    func pop(configuration: NavigationConfiguration,
-             animated: Bool)
-    func pop(configuration: NavigationConfiguration,
-             animated: Bool,
-             completion: (() -> Void)?)
-
-    // pop to
-    func pop(to viewController: UIViewController.Type)
-    func pop(to viewController: UIViewController.Type,
-             configuration: NavigationConfiguration)
-    func pop(to viewController: UIViewController.Type,
-             configuration: NavigationConfiguration,
-             animated: Bool,
-             completion: (() -> Void)?)
-
     // pop to root
     func popToRoot()
     func popToRoot(configuration: NavigationConfiguration)
@@ -69,14 +51,6 @@ protocol Router: Presentable {
     func popToRoot(configuration: NavigationConfiguration,
                    animated: Bool,
                    completion: (() -> Void)?)
-
-    // helpers
-    func resetNavigationConfiguration(to configuration: NavigationConfiguration)
-
-    // hero
-    func enableHeroTransitions()
-    func disableHeroTransitions()
-    func resetHeroTransitions()
 }
 
 // MARK: Present
@@ -140,40 +114,6 @@ extension Router {
 
     func dismiss(animated: Bool) {
         dismiss(animated: animated, completion: nil)
-    }
-}
-
-// MARK: Pop
-extension Router {
-    func pop() {
-        pop(configuration: .none)
-    }
-
-    func pop(configuration: NavigationConfiguration) {
-        pop(configuration: configuration, animated: true)
-    }
-
-    func pop(configuration: NavigationConfiguration,
-             animated: Bool) {
-        pop(configuration: configuration, animated: animated, completion: nil)
-    }
-}
-
-// MARK: Pop to
-extension Router {
-    func pop(to viewController: UIViewController.Type) {
-        pop(to: viewController, configuration: .none)
-    }
-
-    func pop(to viewController: UIViewController.Type,
-             configuration: NavigationConfiguration) {
-        pop(to: viewController, configuration: configuration, animated: true)
-    }
-
-    func pop(to viewController: UIViewController.Type,
-             configuration: NavigationConfiguration,
-             animated: Bool) {
-        pop(to: viewController, configuration: configuration, animated: animated, completion: nil)
     }
 }
 

@@ -9,6 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var rootController: UINavigationController = {
         UINavigationController(rootViewController: UIViewController())
     }()
+    
+    lazy var router = NavigationRouter(rootController: rootController)
+    lazy var applicationCoordinator = ApplicationCoordinator(router: router)
 
 
     func application(_ application: UIApplication,
@@ -16,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppConfigurator.configure([
             AssembliesConfigurator.self
         ])
-
+        
         window = windowBuilder.build(with: rootController)
         window?.makeKeyAndVisible()
+        
+        applicationCoordinator.start()
         return true
     }
 }
