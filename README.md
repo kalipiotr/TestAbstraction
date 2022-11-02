@@ -73,3 +73,5 @@ final class WeatherInfoPresenterTests: XCTestCase, AssemblablePresenterTestCase 
         wait(for: [view])
     }
 ```
+
+In `WeatherInfoPresenterTests` we do not have to remember to remove objects from fields `assembly`, `sut`, `view`. **TestAbstraction** will do it for us. 
