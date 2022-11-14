@@ -3,9 +3,6 @@ use_frameworks!
 
 inhibit_all_warnings!
 
-# workaround for CocoaPods and the new Xcode build system:
-# https://www.ralfebert.de/ios/blog/cocoapods-clean-input-output-files/
-# https://github.com/CocoaPods/CocoaPods/issues/8151
 install! 'cocoapods', :disable_input_output_paths => true
 
 def network
